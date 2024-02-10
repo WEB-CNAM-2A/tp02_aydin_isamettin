@@ -1,24 +1,38 @@
 import { Component } from '@angular/core';
+import { FormulaireComponent } from '../formulaire/formulaire.component';
 
 @Component({
-  selector: 'app-recapitulatif',
-  standalone: true,
-  imports: [],
-  templateUrl: './recapitulatif.component.html',
-  styleUrl: './recapitulatif.component.css'
+    selector: 'app-recapitulatif',
+    standalone: true,
+    templateUrl: './recapitulatif.component.html',
+    styleUrl: './recapitulatif.component.css',
+    imports: [FormulaireComponent]
 })
 export class RecapitulatifComponent {
-  nom = 'TEST';
-  prenom = 'TEST';
-  adresse = 'TEST';
-  codePostal = 'TEST';
-  ville = 'TEST';
-  telephone = 'TEST';
-  email = 'TEST';
-  civilite = 'TEST';
-  password = 'TEST';
-  login = 'TEST';
-  pays = 'TEST';
+  nom = '';
+  prenom = '';
+  adresse = '';
+  codePostal = '';
+  ville = '';
+  telephone = '';
+  email = '';
+  civilite = '';
+  password = '';
+  login = '';
+  pays = '';
 
-  isVisible = false;
+  receiveFormData(data: any) {
+    // Receive data from child component
+    this.nom = data.nom;
+    this.prenom = data.prenom;
+    this.adresse = data.adresse;
+    this.codePostal = data.codePostal;
+    this.ville = data.ville;
+    this.telephone = data.telephone;
+    this.email = data.email;
+    this.civilite = data.civilite;
+    this.password = data.password;
+    this.login = data.login;
+    this.pays = data.pays;
+  }
 }

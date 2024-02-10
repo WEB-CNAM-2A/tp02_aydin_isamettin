@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -20,19 +20,24 @@ export class FormulaireComponent {
   password = '';
   login = '';
   pays = '';
-
-  btnDisabled = true;
-
-checkForm() {
-    if (this.nom !== '' && this.prenom !== '' && this.adresse !== '' && this.codePostal !== '' && this.ville !== '' && this.telephone !== '' && this.email !== '' && this.civilite !== '' && this.password !== '' && this.login !== '' && this.pays !== '') {
-        this.btnDisabled = false;
-    } else {
-        this.btnDisabled = true;
-    }
-}
   
-onSubmit() {
-    console.log('Formulaire soumis');
-}
+  @Output() submit = new EventEmitter<any>();
+  
+  sendParent() {
+    console.log('sendParent');
+    this.submit.emit({
+      nom: this.nom,
+      prenom: this.prenom,
+      adresse: this.adresse,
+      codePostal: this.codePostal,
+      ville: this.ville,
+      telephone: this.telephone,
+      email: this.email,
+      civilite: this.civilite,
+      password: this.password,
+      login: this.login,
+      pays: this.pays
+    });
+  }
 
 }

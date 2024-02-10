@@ -1,12 +1,19 @@
-<p> Nom : {{nom}}
-<br>Prénom : {{prenom}}
-<br>Adresse : {{adresse}}
-<br>Code postal : {{codePostal}}
-<br>Ville : {{ville}}
-<br>Téléphone : {{telephone}}
-<br>Email : {{email}}
-<br>Civilité : {{civilite}}
-<br>Mot de passe : {{password}}
-<br>Login : {{login}}
-<br>Pays : {{pays}}</p>
+<!-- Include the child component -->
+<app-formulaire (submit)="receiveFormData($event)"></app-formulaire>
 
+
+<!-- recapitulatif.component.html -->
+<div>
+    <h2>Recapitulatif</h2>
+    <p>Nom: {{ nom }}</p>
+    <p>Prénom: {{ prenom }}</p>
+    <p>Adresse: {{ adresse }}</p>
+    <p>Code Postal: {{ codePostal }}</p>
+    <p>Ville : {{ville}}</p>
+    <p>Numéro de téléphone : {{telephone}}</p>
+    <p>Adresse mail : {{email}}</p>
+    <p>Civilité : {{civilite}}</p>
+    <p>Password : {{password}}</p>
+    <p>Login : {{login}}</p>
+    <p>Pays : {{pays}}</p>
+</div>

@@ -1,19 +1,27 @@
-<!-- Include the child component -->
-<app-formulaire (submit)="receiveFormData($event)"></app-formulaire>
-
-
-<!-- recapitulatif.component.html -->
-<div>
-    <h2>Recapitulatif</h2>
-    <p>Nom: {{ nom }}</p>
-    <p>Prénom: {{ prenom }}</p>
-    <p>Adresse: {{ adresse }}</p>
-    <p>Code Postal: {{ codePostal }}</p>
-    <p>Ville : {{ville}}</p>
-    <p>Numéro de téléphone : {{telephone}}</p>
-    <p>Adresse mail : {{email}}</p>
-    <p>Civilité : {{civilite}}</p>
-    <p>Password : {{password}}</p>
-    <p>Login : {{login}}</p>
-    <p>Pays : {{pays}}</p>
+<div class="container mx-auto max-w-screen-md px-5">
+    <div class="m-auto">
+        <div>
+            <app-formulaire (submit)="receiveFormData($event)"></app-formulaire>
+            <div class="mt-5 bg-white shadow cursor-pointer rounded-xl" [hidden]="isHidden">
+                <div class="flex">
+                    <div class="flex-1 py-5 pl-5 overflow-hidden">
+                        <ul>
+                            <li class="text-sm text-gray-600 uppercase pb-3">Check</li>
+                            <li>First Name : {{ nom }}</li>
+                            <li>Last Name : {{ prenom }}</li>
+                            <li>Adress : {{ adresse }}</li>
+                            <li>City : {{ ville }}</li>
+                            <li>Zip : {{ codePostal }}</li>
+                            <li>Phone : {{ telephone }}</li>
+                            <li>Email : {{ email }}</li>
+                            <li>Civility : {{ civilite }}</li>
+                            <li>Login : {{ login }}</li>
+                            <li>Password : {{ password }}</li>
+                            <li>Country : {{ pays }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

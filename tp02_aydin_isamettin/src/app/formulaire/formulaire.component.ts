@@ -20,6 +20,7 @@ export class FormulaireComponent {
   password = '';
   login = '';
   pays = '';
+  isHidden = true;
   
   @Output() submit = new EventEmitter<any>();
   
@@ -36,7 +37,8 @@ export class FormulaireComponent {
       civilite: this.civilite,
       password: this.password,
       login: this.login,
-      pays: this.pays
+      pays: this.pays,
+      isHidden: false
     });
   }
 

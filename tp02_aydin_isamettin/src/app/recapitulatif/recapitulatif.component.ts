@@ -20,6 +20,7 @@ export class RecapitulatifComponent {
   password = '';
   login = '';
   pays = '';
+  isHidden = true;
 
   receiveFormData(data: any) {
     // Receive data from child component
@@ -34,5 +35,6 @@ export class RecapitulatifComponent {
     this.password = data.password;
     this.login = data.login;
     this.pays = data.pays;
+    this.isHidden = data.isHidden;
   }
 }

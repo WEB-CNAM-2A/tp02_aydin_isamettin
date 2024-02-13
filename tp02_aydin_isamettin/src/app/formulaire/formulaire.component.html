@@ -1,62 +1,51 @@
-<!-- formulaire.component.html -->
-
-<div>
-  <h2>Formulaire</h2>
-
-  <div>
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" [(ngModel)]="nom">
+<div class="bg-white rounded-lg shadow">
+  <div class="flex">
+    <div class="flex-1 py-5 pl-5">
+      <h1 class="text-2xl font-semibold">Sign Up</h1>
+    </div>
   </div>
-
-  <div>
-    <label for="prenom">Prénom:</label>
-    <input type="text" id="prenom" [(ngModel)]="prenom">
+  <div class="px-5 pb-5">
+    <div class="flex">
+      <div class="flex-1 pr-1">
+        <input placeholder="First Name" [(ngModel)]="nom"
+          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+      </div>
+      <div class="flex-1 pl-1">
+        <input placeholder="Last Name" [(ngModel)]="prenom"
+          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+      </div>
+    </div>
+    <div class="flex">
+      <div class="flex-grow w-3/6 pr-1"><input placeholder="Adress" [(ngModel)]="adresse"
+          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+      </div>
+      <div class="flex-grow w-2/6 pl-1 pr-1"><input placeholder="City" [(ngModel)]="ville"
+          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+      </div>
+      <div class="flex-grow w-1/6 pl-1"><input placeholder="Zip" [(ngModel)]="codePostal"
+          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+      </div>
+    </div>
+    <input placeholder="Phone" [(ngModel)]="telephone"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+    <input placeholder="Email" [(ngModel)]="email"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+    <input placeholder="Civility" [(ngModel)]="civilite"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+    <input placeholder="Login" [(ngModel)]="login"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+    <input placeholder="Password" type="password" [(ngModel)]="password"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+    <input placeholder="Country" [(ngModel)]="pays"
+      class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
   </div>
-
-  <div>
-    <label for="adresse">adresse:</label>
-    <input type="text" id="adresse" [(ngModel)]="adresse">
+  <hr class="mt-4">
+  <div class="flex flex-row-reverse p-3">
+    <div class="flex-initial pl-3">
+      <button type="button" (click)="sendParent()"
+        class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
+        Create
+      </button>
+    </div>
   </div>
-
-  <div>
-    <label for="codePostal">codePostal:</label>
-    <input type="number" id="codePostal" [(ngModel)]="codePostal">
-  </div>
-
-  <div>
-    <label for="ville">ville:</label>
-    <input type="text" id="ville" [(ngModel)]="ville">
-  </div>
-
-  <div>
-    <label for="telephone">telephone:</label>
-    <input type="number" id="telephone" [(ngModel)]="telephone">
-  </div>
-
-  <div>
-    <label for="email">email:</label>
-    <input type="email" id="email" [(ngModel)]="email">
-  </div>
-
-  <div>
-    <label for="civilite">civilite:</label>
-    <input type="text" id="civilite" [(ngModel)]="civilite">
-  </div>
-
-  <div>
-    <label for="password">password:</label>
-    <input type="password" id="password" [(ngModel)]="password">
-  </div>
-
-  <div>
-    <label for="login">login:</label>
-    <input type="text" id="login" [(ngModel)]="login">
-  </div>
-
-  <div>
-    <label for="pays">pays:</label>
-    <input type="text" id="pays" [(ngModel)]="pays">
-  </div>
-
-  <button (click)="sendParent()">Submit</button>
 </div>

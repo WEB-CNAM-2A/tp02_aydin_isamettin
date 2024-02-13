@@ -9,6 +9,9 @@
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
+                    <a routerLink="/">Home</a>
+                </li>
+                <li>
                     <a>Products</a>
                     <ul class="p-2">
                         <li><a>Potato 1</a></li>
@@ -17,10 +20,16 @@
                 </li>
             </ul>
         </div>
-        <a class="btn btn-ghost text-xl">Potato</a>
+        <div class="pl-2 w-10 rounded-full" routerLink="/">
+            <img src="https://www.svgrepo.com/show/398113/potato.svg"/>
+        </div>
+        <a class="btn btn-ghost text-xl" routerLink="/">Potato</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
             <li>
                 <details>
                     <summary>Products</summary>
@@ -56,6 +65,9 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-ghost">Sign In</a>
-
+        <div class="flex flex-col lg:flex-row">
+            <a class="btn btn-ghost" routerLink="/recapitulatif">Login</a>
+            <div class="divider divider-horizontal"></div>
+            <a class="btn btn-ghost" routerLink="/recapitulatif">Sign Up</a>
+        </div>
     </div>

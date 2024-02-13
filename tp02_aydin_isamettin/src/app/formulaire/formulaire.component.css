@@ -1,0 +1,15 @@
+/* Add this CSS to your styles.css or any other CSS file */
+
+.container {
+  max-width: 50%;
+  /* Adjust as needed */
+}
+
+.row {
+  display: flex;
+  justify-content: left;
+}
+
+.col-md-6 {
+  width: 100%;
+}

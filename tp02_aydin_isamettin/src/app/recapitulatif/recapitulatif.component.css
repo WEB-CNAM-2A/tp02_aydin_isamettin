@@ -1,0 +1,21 @@
+/* Add this CSS to your styles.css or any other CSS file */
+
+.container {
+  max-width: 50%;
+  /* Adjust as needed */
+  padding-top: 2rem;
+
+}
+
+.row {
+  display: flex;
+  justify-content: right;
+}
+
+.col-md-6 {
+  width: 100%;
+}
+
+.mycontent-left {
+  border-right: 1px solid #c5c5c5;
+}

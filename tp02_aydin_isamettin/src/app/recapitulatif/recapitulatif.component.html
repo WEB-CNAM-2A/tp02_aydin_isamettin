@@ -1,19 +1,73 @@
-<!-- Include the child component -->
-<app-formulaire (submit)="receiveFormData($event)"></app-formulaire>
+<div class="lolilol container">
+
+    <div class="row">
+        <!-- Include the child component -->
+        <app-formulaire class="col mycontent-left" (submit)="receiveFormData($event)"></app-formulaire>
 
 
-<!-- recapitulatif.component.html -->
-<div>
-    <h2>Recapitulatif</h2>
-    <p>Nom: {{ nom }}</p>
-    <p>Prénom: {{ prenom }}</p>
-    <p>Adresse: {{ adresse }}</p>
-    <p>Code Postal: {{ codePostal }}</p>
-    <p>Ville : {{ville}}</p>
-    <p>Numéro de téléphone : {{telephone}}</p>
-    <p>Adresse mail : {{email}}</p>
-    <p>Civilité : {{civilite}}</p>
-    <p>Password : {{password}}</p>
-    <p>Login : {{login}}</p>
-    <p>Pays : {{pays}}</p>
+        <!-- recap.component.html -->
+        <div class="col">
+            <h2>Recapitulatif</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom:</label>
+                        <input type="text" id="nom" class="form-control" value="{{ nom }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom:</label>
+                        <input type="text" id="prenom" class="form-control" value="{{ prenom }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="adresse" class="form-label">Adresse:</label>
+                        <input type="text" id="adresse" class="form-control" value="{{ adresse }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="codePostal" class="form-label">Code Postal:</label>
+                        <input type="number" id="codePostal" class="form-control" value="{{ codePostal }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ville" class="form-label">Ville:</label>
+                        <input type="text" id="ville" class="form-control" value="{{ ville }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telephone" class="form-label">Téléphone:</label>
+                        <input type="number" id="telephone" class="form-control" value="{{ telephone }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" class="form-control" value="{{ email }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="civilite" class="form-label">Civilité:</label>
+                        <input type="text" id="civilite" class="form-control" value="{{ civilite }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="text" id="password" class="form-control" value="{{ password }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="login" class="form-label">Login:</label>
+                        <input type="text" id="login" class="form-control" value="{{ login }}" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pays" class="form-label">Pays:</label>
+                        <input type="text" id="pays" class="form-control" value="{{ pays }}" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>

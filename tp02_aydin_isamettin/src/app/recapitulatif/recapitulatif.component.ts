@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormulaireComponent } from '../formulaire/formulaire.component';
 
 @Component({
-    selector: 'app-recapitulatif',
-    standalone: true,
-    templateUrl: './recapitulatif.component.html',
-    styleUrl: './recapitulatif.component.css',
-    imports: [FormulaireComponent]
+  selector: 'app-recapitulatif',
+  standalone: true,
+  templateUrl: './recapitulatif.component.html',
+  styleUrl: './recapitulatif.component.css',
+  imports: [FormulaireComponent]
 })
 export class RecapitulatifComponent {
   nom = '';
@@ -36,5 +36,10 @@ export class RecapitulatifComponent {
     this.login = data.login;
     this.pays = data.pays;
     this.isHidden = data.isHidden;
+  }
+
+  toggleHidden() {
+    this.isHidden = true;
+    console.log('toggleHidden');
   }
 }

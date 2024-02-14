@@ -2,8 +2,18 @@
     <div class="m-auto">
         <div>
             <app-formulaire (submit)="receiveFormData($event)"></app-formulaire>
-            <div class="mt-5 bg-white shadow cursor-pointer rounded-xl" [hidden]="isHidden">
+
+            <div class="mt-5 bg-white shadow rounded-xl" [hidden]="isHidden">
                 <div class="flex">
+                    <div class="order-last p-1">
+                        <button (click)="toggleHidden()" class="btn btn-square">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
                     <div class="flex-1 py-5 pl-5 overflow-hidden">
                         <ul>
                             <li class="text-sm text-gray-600 uppercase pb-3">Check</li>
@@ -22,6 +32,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

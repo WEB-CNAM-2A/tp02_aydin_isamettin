@@ -3,7 +3,6 @@ FROM node:20 as builder-frontend
 # Set working directory
 WORKDIR /app
 
-
 # Copy project folder
 COPY frontend /app
 
@@ -28,14 +27,13 @@ RUN mkdir -p /var/log/supervisor
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Copy projects
-COPY --from=builder-frontend /app/dist/tp02-aydin-isamettin/browser/ /var/www/html
+COPY --from=builder-frontend /app/dist/tp02_aydin_isamettin/browser/ /var/www/html
 #COPY --from=builder-backend /app/dist /app/backend
 
 # Set working directory
 WORKDIR /app/backend
 # Install dependencies
 #RUN npm install --production
-
 
 # Copy nginx configuration
 COPY docker/nginx.conf /etc/nginx/nginx.conf

@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-formulaire',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule],
   templateUrl: './formulaire.component.html',
   styleUrl: './formulaire.component.css'
 })
